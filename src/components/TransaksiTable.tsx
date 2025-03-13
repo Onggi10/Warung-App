@@ -45,7 +45,9 @@ export default function TransaksiTable() {
         jumlah: t.jumlah,
         harga_satuan: t.harga_satuan,
         subtotal: t.subtotal,
-        barang_nama: t.barang?.barang_nama || "Tidak ditemukan", // Ambil nilai string
+        barang_nama:
+          (t.barang as { barang_nama?: string } | null)?.barang_nama ||
+          "Tidak ditemukan",
       }));
 
       setTransaksi(transaksiData);
