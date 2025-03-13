@@ -40,5 +40,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Ignore environment variables
-.env.local
+# # Ignore environment variables
+# .env.local
